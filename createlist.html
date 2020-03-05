@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+    <script>
+        let ul = document.createElement('ul');
+        document.body.appendChild(ul);
+        while(true) {
+            let text = prompt("Введите текст");
+            if (!text || KeyboardEvent.code == "Esc") {
+                break;
+            }
+            let liElem = document.createElement('li')
+            liElem.textContent = text;
+            ul.appendChild(liElem);
+        }
+    </script>
+</body>
+</html>

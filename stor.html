@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localstorage</title>
+</head>
+<body>
+    <form>
+        <textarea name="text" id="text" cols="30" rows="10" placeholder="Напишите сообщение здесь"></textarea><br>
+        <input type="button" id="but" name="but" value="Очистить">
+        <script>
+            but.onclick = function () {
+                localStorage.removeItem('text');
+                text.value = "";
+            };
+            text.value = localStorage.getItem('text');
+            text.oninput = function () {
+                localStorage.setItem('text', text.value);
+
+            };
+        </script>
+    </form>
+</body>
+</html>
